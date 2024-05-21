@@ -1,12 +1,4 @@
 <?php
-
-namespace Vicus\Design\Model;
-
-use \Vicus\Design\Helper\DesignHelper;
-use \Magento\Framework\Filesystem;
-use \Magento\Framework\App\Filesystem\DirectoryList;
-use Symfony\Component\Console\Input\ArrayInput;
-
 /**
  * Vicus Design
  *
@@ -15,6 +7,13 @@ use Symfony\Component\Console\Input\ArrayInput;
  * @author      Vicus eBusiness Solutions <info@vicus.nl>
  * @copyright   see LICENSE.txt
  */
+
+namespace Vicus\Design\Model;
+
+use \Vicus\Design\Helper\DesignHelper;
+use \Magento\Framework\Filesystem;
+use \Magento\Framework\App\Filesystem\DirectoryList;
+use Symfony\Component\Console\Input\ArrayInput;
 
 class Generator
 {

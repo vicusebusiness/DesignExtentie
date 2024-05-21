@@ -1,4 +1,12 @@
 <?php 
+/**
+ * Vicus Design
+ *
+ * @category    Vicus
+ * @package     Vicus\Design
+ * @author      Vicus eBusiness Solutions <info@vicus.nl>
+ * @copyright   see LICENSE.txt
+ */
 
 namespace Vicus\Design\Observer;
 
@@ -13,15 +21,6 @@ use \Vicus\Design\Command\GenerateStyle;
 use \Symfony\Component\Console\Input\ArrayInput;
 use \Symfony\Component\Console\Input\InputInterface;
 use \Symfony\Component\Console\Output\OutputInterface;
-
-/**
- * Vicus Design
- *
- * @category    Vicus
- * @package     Vicus\Design
- * @author      Vicus eBusiness Solutions <info@vicus.nl>
- * @copyright   see LICENSE.txt
- */
 
 class Triggerconfig implements ObserverInterface
 {

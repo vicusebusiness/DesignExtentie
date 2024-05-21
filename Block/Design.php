@@ -1,9 +1,4 @@
 <?php
-
-namespace Vicus\Design\Block;
-
-use \Magento\Config\Block\System\Config\Form\Field;
-
 /**
  * Vicus Design
  *
@@ -12,6 +7,11 @@ use \Magento\Config\Block\System\Config\Form\Field;
  * @author      Vicus eBusiness Solutions <info@vicus.nl>
  * @copyright   see LICENSE.txt
  */
+
+namespace Vicus\Design\Block;
+
+use \Magento\Config\Block\System\Config\Form\Field;
+
 
 class Design extends \Magento\Config\Block\System\Config\Form\Field
 {

@@ -1,13 +1,4 @@
 <?php
-namespace Vicus\Design\Command;
-
-use Vicus\Design\Model\Generator;
-use \Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\ArrayInput;
-use \Symfony\Component\Console\Input\InputInterface;
-use \Symfony\Component\Console\Output\OutputInterface;
-
-
 /**
  * Vicus Design
  *
@@ -16,6 +7,14 @@ use \Symfony\Component\Console\Output\OutputInterface;
  * @author      Vicus eBusiness Solutions <info@vicus.nl>
  * @copyright   see LICENSE.txt
  */
+
+namespace Vicus\Design\Command;
+
+use Vicus\Design\Model\Generator;
+use \Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\ArrayInput;
+use \Symfony\Component\Console\Input\InputInterface;
+use \Symfony\Component\Console\Output\OutputInterface;
 
 class GenerateStyle extends Command
 {

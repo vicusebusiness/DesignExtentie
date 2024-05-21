@@ -1,4 +1,12 @@
 <?php
+/**
+ * Vicus Design
+ *
+ * @category    Vicus
+ * @package     Vicus\Design
+ * @author      Vicus eBusiness Solutions <info@vicus.nl>
+ * @copyright   see LICENSE.txt
+ */
 
 namespace Vicus\Design\Helper;
 
@@ -8,15 +16,6 @@ use Magento\Store\Model\ScopeInterface;
 use Magento\Framework\View\Design\Theme\ThemeProviderInterface;
 use Magento\Framework\App\Helper\Context;
 use Magento\Store\Model\Config\StoreView;
-
-/**
- * Vicus Design
- *
- * @category    Vicus
- * @package     Vicus\Design
- * @author      Vicus eBusiness Solutions <info@vicus.nl>
- * @copyright   see LICENSE.txt
- */
 
 class DesignHelper extends \Magento\Framework\App\Helper\AbstractHelper
 {
