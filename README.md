@@ -1,2 +1,2 @@
-# Vicus_Design
-Design module voor magento whitelabel
+# DesignExtentie
+Design extentie voor magento whitelabel

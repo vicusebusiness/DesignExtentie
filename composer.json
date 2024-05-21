@@ -1,0 +1,17 @@
+{
+    "name": "vicus/design",
+    "description": "customize your magento2 website colors",
+    "autoload": {
+        "psr-4": {
+            "Vicus\\Design\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Daniel, Michael van den Brink \"danieljunek15\""
+        }
+    ],
+    "require": {
+        "php": "8.*"
+    }
+}
