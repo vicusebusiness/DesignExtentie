@@ -4,6 +4,15 @@ namespace Vicus\Design\Block;
 
 use \Magento\Config\Block\System\Config\Form\Field;
 
+/**
+ * Vicus Design
+ *
+ * @category    Vicus
+ * @package     Vicus\Design
+ * @author      Vicus eBusiness Solutions <info@vicus.nl>
+ * @copyright   see LICENSE.txt
+ */
+
 class Design extends \Magento\Config\Block\System\Config\Form\Field
 {
     /**

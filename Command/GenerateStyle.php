@@ -8,11 +8,25 @@ use \Symfony\Component\Console\Input\InputInterface;
 use \Symfony\Component\Console\Output\OutputInterface;
 
 
+/**
+ * Vicus Design
+ *
+ * @category    Vicus
+ * @package     Vicus\Design
+ * @author      Vicus eBusiness Solutions <info@vicus.nl>
+ * @copyright   see LICENSE.txt
+ */
 
 class GenerateStyle extends Command
 {
     protected $generator;
 
+    /**
+     * get value of generator
+     *
+     * @param string $generator First
+     * @return //De file Generator.php heeft een model die hier word opgehaald
+     */
     public function __construct(Generator $generator) {
         $this->generator = $generator;
 
@@ -24,6 +38,13 @@ class GenerateStyle extends Command
         parent::configure();
     }
 
+    /**
+     * Adds two integers together
+     *
+     * @param string $input First
+     * @param string $output Second
+     * @return // aan maken van style document en het vullen er van
+     */
     public function execute(InputInterface $input, OutputInterface $output) {
         \Magento\Framework\App\ObjectManager::getInstance()->get('Psr\Log\LoggerInterface')->info('Starting generation') . PHP_EOL;
         $this->generator->execute();

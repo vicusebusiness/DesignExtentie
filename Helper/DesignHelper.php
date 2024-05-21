@@ -9,11 +9,28 @@ use Magento\Framework\View\Design\Theme\ThemeProviderInterface;
 use Magento\Framework\App\Helper\Context;
 use Magento\Store\Model\Config\StoreView;
 
+/**
+ * Vicus Design
+ *
+ * @category    Vicus
+ * @package     Vicus\Design
+ * @author      Vicus eBusiness Solutions <info@vicus.nl>
+ * @copyright   see LICENSE.txt
+ */
+
 class DesignHelper extends \Magento\Framework\App\Helper\AbstractHelper
 {
     protected $themeProvider;
     protected $storeView;
 
+    /**
+     * get values of storeView themeProvider and context
+     *
+     * @param Context $context First
+     * @param ThemeProviderInterface $themeProvider Second
+     * @param StoreView $storeView Third
+     * @return // storeView themeProvider en een constructor
+     */
     public function __construct(Context $context, ThemeProviderInterface $themeProvider, StoreView $storeView)
     {
         $this->storeView = $storeView;
@@ -34,6 +51,11 @@ class DesignHelper extends \Magento\Framework\App\Helper\AbstractHelper
         return $this->scopeConfig->getValue($path, \Magento\Store\Model\ScopeInterface::SCOPE_STORE, $scopeCode);
     }
 
+    /**
+     * gets the theme
+     *
+     * @return $theme
+     */
     public function getTheme()
     {
         $themeId = $this->scopeConfig->getValue(
@@ -48,6 +70,11 @@ class DesignHelper extends \Magento\Framework\App\Helper\AbstractHelper
         return $theme;
     }
 
+    /**
+     * get languages as a object
+     * 
+     * 
+     */
     public function getLocales()
     {
         return $this->storeView->retrieveLocales();
