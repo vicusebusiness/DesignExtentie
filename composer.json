@@ -8,7 +8,8 @@
     },
     "authors": [
         {
-            "name": "Daniel, Michael van den Brink \"danieljunek15\""
+            "name": "Daniel, Michael van den Brink \"danieljunek15\"",
+            "email": "servicedesk@vicus.nl"
         }
     ],
     "require": {

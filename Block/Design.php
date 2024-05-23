@@ -1,17 +1,8 @@
 <?php
-/**
- * Vicus Design
- *
- * @category    Vicus
- * @package     Vicus\Design
- * @author      Vicus eBusiness Solutions <info@vicus.nl>
- * @copyright   see LICENSE.txt
- */
 
 namespace Vicus\Design\Block;
 
 use \Magento\Config\Block\System\Config\Form\Field;
-
 
 class Design extends \Magento\Config\Block\System\Config\Form\Field
 {
