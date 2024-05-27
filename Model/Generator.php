@@ -49,7 +49,7 @@ class Generator
      */
     protected function getContents($empty) {
 
-        if ($empty == false) {
+        if ($empty == true) {
             \Magento\Framework\App\ObjectManager::getInstance()->get('Psr\Log\LoggerInterface')->info('var empty = true') . PHP_EOL;
             $contents = '';
             return $contents;
@@ -144,26 +144,31 @@ class Generator
      */
     public function execute($empty = false) {
 
-        $this->getContents($empty);
+        // $this->getContents($empty);
         $contents = $this->getContents($empty);
 
         $pathConfig = DirectoryList::getDefaultConfig();
         $media = $this->fileSystem->getDirectoryWrite(DirectoryList::APP);
       
-        $fullPathReal = 'design/' . $this->helper->getTheme()->getFullPath() . '/web/css/source/_daniel.less';
+        $fullPathReal = 'design/' . $this->helper->getTheme()->getFullPath() . '/web/css/source/_design.less';
         $locales = $this->helper->getLocales();
 
         foreach ($locales as $locale) {
 
             // This line is the dynamic build up for the directory and file that needs to be deleted.
-            $materialPathToDeleteBeforeCompiling = $this->directoryList->getPath(DirectoryList::TMP_MATERIALIZATION_DIR) . '/' . $this->helper->getTheme()->getFullPath() . '/' . $locale . '/css/source/_daniel.less';
+            $materialPathToDeleteBeforeCompiling = $this->directoryList->getPath(DirectoryList::TMP_MATERIALIZATION_DIR) . '/' . $this->helper->getTheme()->getFullPath() . '/' . $locale . '/css/source/_design.less';
             $materialPathToDeleteBeforeCompiling2 = $this->directoryList->getPath(DirectoryList::TMP_MATERIALIZATION_DIR) . '/' . $this->helper->getTheme()->getFullPath() . '/' . $locale . '/css/source/_variables_extend.less';
-            $materialPath = $this->directoryList->getPath(DirectoryList::APP) . '/design/' . $this->helper->getTheme()->getFullPath() . '/web/css/source/_daniel.less';
-            $deleteFolderWithThisPath = $this->directoryList->getPath(DirectoryList::STATIC_VIEW) . '/' . $this->helper->getTheme()->getFullPath() . '/' . $locale . '/css'; 
+            $materialPath = $this->directoryList->getPath(DirectoryList::APP) . '/design/' . $this->helper->getTheme()->getFullPath() . '/web/css/source/_design.less';
+            $deleteFolderWithThisPath = $this->directoryList->getPath(DirectoryList::STATIC_VIEW) . '/' . $this->helper->getTheme()->getFullPath() . '/' . $locale . '/css';
+            
+            // This is a echo to CLI for testing purposes
+            // echo 'materialPathToDeleteBeforeCompiling  ===  ' . $materialPathToDeleteBeforeCompiling . PHP_EOL;
+            // echo 'materialPath  ===  ' . $materialPath . PHP_EOL;
+            // echo 'deleteFolderWithThisPath  ===  ' . $deleteFolderWithThisPath . PHP_EOL;
 
             $materialPathArray = [
-                $materialPathToDeleteBeforeCompiling,
-                $materialPath
+                $materialPath,
+                $materialPathToDeleteBeforeCompiling
             ];
 
             if (file_exists($materialPathToDeleteBeforeCompiling && $materialPathToDeleteBeforeCompiling2)) {
@@ -190,13 +195,16 @@ class Generator
      */
     protected function saveFile($contents, $paths) {
         foreach ($paths as $path) {
+
+            // This is a echo to CLI for testing purposes
+            // echo 'Check wat path is ===  ' . $path . PHP_EOL;
             if (file_exists($path)) {   
                 unlink($path);
             }
             $fp = fopen($path, "w");
             fwrite($fp, $contents);
+            
             fclose($fp);
-            return 69;
         }
     }
 }

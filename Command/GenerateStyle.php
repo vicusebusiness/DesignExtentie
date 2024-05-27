@@ -15,10 +15,12 @@ use \Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\ArrayInput;
 use \Symfony\Component\Console\Input\InputInterface;
 use \Symfony\Component\Console\Output\OutputInterface;
+use \Vicus\Design\Helper\DesignHelper;
 
 class GenerateStyle extends Command
 {
     protected $generator;
+    protected $helper;
 
     /**
      * get value of generator
@@ -26,8 +28,9 @@ class GenerateStyle extends Command
      * @param string $generator First
      * @return //De file Generator.php heeft een model die hier word opgehaald
      */
-    public function __construct(Generator $generator) {
+    public function __construct(Generator $generator, DesignHelper $helper) {
         $this->generator = $generator;
+        $this->helper = $helper;
 
         parent::__construct();
     }
@@ -46,10 +49,21 @@ class GenerateStyle extends Command
      */
     public function execute(InputInterface $input, OutputInterface $output) {
         \Magento\Framework\App\ObjectManager::getInstance()->get('Psr\Log\LoggerInterface')->info('Starting generation') . PHP_EOL;
-        $this->generator->execute();
+
+        $value = $this->helper->getStoreConfig('design/designSetting/onOffSwitch');
+
+        if ($value == 1) {
+            $this->generator->execute(true);
+        } else {
+            $this->generator->execute();
+        }
+
         \Magento\Framework\App\ObjectManager::getInstance()->get('Psr\Log\LoggerInterface')->info('Ending generation') . PHP_EOL;
-        $arguments = new ArrayInput(['command' => 'setup:static-content:deploy -f']);
-        $this->getApplication()->find('setup:static-content:deploy -f')->run($arguments, $output);
+
+        $arguments = new ArrayInput(['command' => 'setup:static-content:deploy', '--force' => true]);
+
+        $this->getApplication()->find('setup:static-content:deploy')->run($arguments, $output);
+
         return 0;
     }
 }
