@@ -8,216 +8,226 @@
 			<label>Design</label>
 			<tab>vicus</tab>
 			<resource>Vicus_Design::config_vicus_Design</resource>
-            		<group id="designSetting" translate="label" type="color" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1"> 
-
-				<label>Design Settings</label>
-				<field id="onOffSwitch" translate="label" sortOrder="8" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
-					<label>On/Off Design Settings</label>
-					<comment/>
-					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-				</field>
+				<group id="generalOptions" translate="label" type="color" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>General Settings</label>
+					<field id="onOffSwitch" translate="label" sortOrder="8" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>On/Off Design Settings</label>
+						<comment/>
+						<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+					</field>
+				</group>
+            	<group id="designSetting" translate="label" type="color" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1"> 
+					<label>Design Settings</label>
                 		<field id="color_1" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>Color 1</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
+						
                 		<field id="color_2" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>Color 2</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
+
                 		<field id="color_3" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>Color 3</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
+
                 		<field id="color_pagination" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>pagination kleur</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
+
                 		<field id="pagination_color_state" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>pagination kleur hover</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="heading1_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>title kleur een</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
+
                 		<field id="heading2_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>title kleur twee</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
+
                 		<field id="heading3_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>title kleur drie</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
+
                 		<field id="heading4_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>title kleur vier</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
+
                 		<field id="heading5_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>title kleur vijf</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
+
                 		<field id="heading6_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>title kleur zes</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
-
 
                 		<field id="link_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>link kleur</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="call_to_action_button_bg_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>call-to-action knoppen tekst kleuren</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="call_to_action_button_bg_color_state" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>call-to-action knoppen tekst kleuren hover</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
-
 
                 		<field id="secondary_btn_bg_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>secondary knoppen achtergrond kleuren</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
+
                 		<field id="secondary_btn_bg_color_state" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>secondary knoppen achtergrond kleuren hover</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="secondary_btn_text_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>secondary knoppen text kleuren</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="secondary_btn_text_color_state" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>secondary knoppen text kleuren hover</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="list_text_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>lijst stijl kleuren</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="navigation_bg_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>header achtergrond kleuren middel</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="header_top_background_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>header achtergrond kleuren top</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="header_mid_background_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>header achtergrond kleuren middel</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="menu_top_item_hover_bg_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>header achtergrond kleuren hover</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="header_top_text_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>header text kleuren top</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="header_mid_text_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>header text kleuren middel</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="menu_top_item_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>menu kleur top</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="menu_top_item_hover_text_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>header tekst hover kleur</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="footer_top_background" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>footer achtergrond top kleur</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="footer_middle_background" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>footer achtergrond middel kleur</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="footer_bottom_background" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>footer achtergrond bodem kleur</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="footer_top_text_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>footer text top kleur</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="footer_middle_text_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>footer text middel kleur</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="footer_bottom_text_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>footer text bodem kleur</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="footer_outside_background" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>footer outside achtergrond kleur</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
 
                 		<field id="wishlist_btn_color" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
                     			<label>verlanglijst knop/icon kleur</label>
                     			<validate>required-entry</validate>
-					<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
+								<frontend_model>Vicus\Design\Model\Config\Source\ColorPicker</frontend_model>
                 		</field>
-            		</group> 
+            	</group> 
 		</section>
 	</system>
 </config>

@@ -55,7 +55,7 @@ class GenerateStyle extends Command
         if ($value == 1) {
             $this->generator->execute(true);
         } else {
-            $this->generator->execute();
+            $this->generator->execute(false);
         }
 
         \Magento\Framework\App\ObjectManager::getInstance()->get('Psr\Log\LoggerInterface')->info('Ending generation') . PHP_EOL;
