@@ -1,11 +1,9 @@
 {
     "name": "vicus/design",
+    "type": "magento2-module",
     "description": "customize your magento2 website colors",
-    "autoload": {
-        "psr-4": {
-            "Vicus\\Design\\": "src/"
-        }
-    },
+    "license": "proprietary",
+    "keywords": ["k2m"],
     "authors": [
         {
             "name": "Daniel, Michael van den Brink \"danieljunek15\"",
@@ -13,6 +11,16 @@
         }
     ],
     "require": {
-        "php": "8.*"
+        "php": "8.*",
+        "magento/framework": ">=100.2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "files": ["registration.php"],
+        "psr-4": {
+            "Vicus\\Design\\": ""
+        }
     }
 }
