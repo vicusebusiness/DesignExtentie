@@ -50,9 +50,9 @@ class GenerateStyle extends Command
     public function execute(InputInterface $input, OutputInterface $output) {
         \Magento\Framework\App\ObjectManager::getInstance()->get('Psr\Log\LoggerInterface')->info('Starting generation') . PHP_EOL;
 
-        $value = $this->helper->getStoreConfig('design/designSetting/onOffSwitch');
+        $value = $this->helper->getStoreConfig('design/generalOptions/onOffSwitch');
 
-        if ($value == 1) {
+        if ($value == 0) {
             $this->generator->execute(true);
         } else {
             $this->generator->execute(false);
