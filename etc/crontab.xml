@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/crontab.xsd">
-    <group id="default">
-        <job name="vicus_design_model_generator" instance="Vicus\Design\Model\Generator" method="execute">
-            <schedule>* * * * *</schedule>
-        </job>
-     </group>
-</config>
