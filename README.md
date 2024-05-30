@@ -2,18 +2,14 @@
 Design extentie voor magento whitelabel
 
 
-Step 1. install Vicus_Design module with composer
+Step 1. install Vicus_whitelabel, Vicus_Design module with composer
 
+    composer require vicus/theme-frontend-whitelabel
     composer require vicus/design --no-update
     composer update vicus/design
     php bin/magento module:enable Vicus_Design
     php bin/magento setup:upgrade
     php bin/magento setup:di:compile
-
-Step 1.1 install Vicus_whitelabel
-
-    composer require vicus/theme-frontend-whitelabel
-    php bin/magento setup:upgrade
 
 Step 2. Edit the following file
 
@@ -30,7 +26,7 @@ Step 2. Edit the following file
         </container>
     ======================================================================================================================================
 
-Step 3. Make sure you are on the right theme. (White label)
+Step 3. Make sure you are on the right theme. (White label) in back end and make following path
 
     In the "app/design/frontend" folder make the following path
     "/Vicus/whitelabel/web/css/source/_design.less"
