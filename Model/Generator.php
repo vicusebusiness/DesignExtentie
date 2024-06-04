@@ -135,7 +135,6 @@ class Generator
         return $contents;
     }
 
-
     /**
      * this function makes sure all the nessesary functions with params get activated and run
      * 
@@ -144,7 +143,6 @@ class Generator
      */
     public function execute($empty = false) {
 
-        // $this->getContents($empty);
         $contents = $this->getContents($empty);
 
         $pathConfig = DirectoryList::getDefaultConfig();
@@ -159,10 +157,13 @@ class Generator
             $materialPathToDeleteBeforeCompiling = $this->directoryList->getPath(DirectoryList::TMP_MATERIALIZATION_DIR) . '/' . $this->helper->getTheme()->getFullPath() . '/' . $locale . '/css/source/_design.less';
             $materialPathToDeleteBeforeCompiling2 = $this->directoryList->getPath(DirectoryList::TMP_MATERIALIZATION_DIR) . '/' . $this->helper->getTheme()->getFullPath() . '/' . $locale . '/css/source/_variables_extend.less';
             $materialPath = $this->directoryList->getPath(DirectoryList::APP) . '/design/' . $this->helper->getTheme()->getFullPath() . '/web/css/source/_design.less';
+            $materialPathAddImportToDotLessDocument = $this->directoryList->getPath(DirectoryList::APP) . '/design/' . $this->helper->getTheme()->getFullPath() . '/web/css/source/_variables_extend.less';
             $deleteFolderWithThisPath = $this->directoryList->getPath(DirectoryList::STATIC_VIEW) . '/' . $this->helper->getTheme()->getFullPath() . '/' . $locale . '/css';
-            
+            $contentForImportDotLessFile = "\n @import '_design.less';";
+
             // This is a echo to CLI for testing purposes
             // echo 'materialPathToDeleteBeforeCompiling  ===  ' . $materialPathToDeleteBeforeCompiling . PHP_EOL;
+            // echo 'materialPathToDeleteBeforeCompiling2  ===  ' . $materialPathToDeleteBeforeCompiling2 . PHP_EOL;
             // echo 'materialPath  ===  ' . $materialPath . PHP_EOL;
             // echo 'deleteFolderWithThisPath  ===  ' . $deleteFolderWithThisPath . PHP_EOL;
 
@@ -171,7 +172,7 @@ class Generator
                 $materialPathToDeleteBeforeCompiling
             ];
 
-            if (file_exists($materialPathToDeleteBeforeCompiling && $materialPathToDeleteBeforeCompiling2)) {
+            if ($empty === true) {
                 unlink($materialPathToDeleteBeforeCompiling2);
             }
 
@@ -180,7 +181,10 @@ class Generator
 
                 rmdir($deleteFolderWithThisPath);
             }
+
+            $this->addImportToDotLessDocument($contentForImportDotLessFile, $materialPathToDeleteBeforeCompiling2);
             $this->saveFile($contents, $materialPathArray);
+
         }
         return 69;
     }
@@ -204,6 +208,27 @@ class Generator
             $fp = fopen($path, "w");
             fwrite($fp, $contents);
             
+            fclose($fp);
+        }
+    }
+
+    /**
+     * This function will add thats given in $content to the file thats given in $path.
+     * The goal is to add a @import to a .less file.
+     * 
+     * @param string $content first.
+     * @param string $path second.
+     * 
+     * @return when content is added to given file.
+     * 
+     */
+    public function addImportToDotLessDocument($content, $path) {
+
+        // echo $path;
+        if (file_exists($path)) {
+            // echo 'yes';
+            $fp = fopen($path, "ab");
+            fwrite($fp, $content);
             fclose($fp);
         }
     }

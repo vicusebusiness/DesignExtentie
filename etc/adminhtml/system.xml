@@ -11,7 +11,7 @@
 				<group id="generalOptions" translate="label" type="color" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
 					<label>General Settings</label>
 					<field id="onOffSwitch" translate="label" sortOrder="8" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
-						<label>On/Off Design Settings</label>
+						<label>Enable Design Settings</label>
 						<comment/>
 						<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 					</field>
