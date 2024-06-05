@@ -23,11 +23,11 @@ class Generator
     protected $directoryList;
 
     /**
-     * construct function that calls objects
+     * construct function that calls objects.
      * 
-     * @param DesignHelper $helper first
-     * @param Filesystem $fileSystem second
-     * @param DirectoryList $directoryList third 
+     * @param DesignHelper $helper first.
+     * @param Filesystem $fileSystem second.
+     * @param DirectoryList $directoryList third.
      */
     public function __construct(
         DesignHelper $helper, 
@@ -40,12 +40,12 @@ class Generator
     }
 
     /**
-     * This function makes the desision what content needs to go in the style of the site
+     * This function makes the desision what content needs to go in the style of the site.
      * 
-     * @param bool $empty first
-     * deze param krijgt true of false mee
+     * @param bool $empty first.
+     * deze param krijgt true of false mee.
      * 
-     * @return array $contents
+     * @return array $contents.
      */
     protected function getContents($empty) {
 
@@ -136,9 +136,9 @@ class Generator
     }
 
     /**
-     * this function makes sure all the nessesary functions with params get activated and run
+     * this function makes sure all the nessesary functions with params get activated and run.
      * 
-     * @param $empty first default is false
+     * @param $empty first default is false.
      * 
      */
     public function execute($empty = false) {
@@ -157,6 +157,7 @@ class Generator
             $materialPathToDeleteBeforeCompiling = $this->directoryList->getPath(DirectoryList::TMP_MATERIALIZATION_DIR) . '/' . $this->helper->getTheme()->getFullPath() . '/' . $locale . '/css/source/_design.less';
             $materialPathToDeleteBeforeCompiling2 = $this->directoryList->getPath(DirectoryList::TMP_MATERIALIZATION_DIR) . '/' . $this->helper->getTheme()->getFullPath() . '/' . $locale . '/css/source/_variables_extend.less';
             $materialPath = $this->directoryList->getPath(DirectoryList::APP) . '/design/' . $this->helper->getTheme()->getFullPath() . '/web/css/source/_design.less';
+            $materialPathForCheckingIfPathExistsFunction = $this->directoryList->getPath(DirectoryList::APP) . '/design/' . $this->helper->getTheme()->getFullPath() . '/web/css/source';
             $materialPathAddImportToDotLessDocument = $this->directoryList->getPath(DirectoryList::APP) . '/design/' . $this->helper->getTheme()->getFullPath() . '/web/css/source/_variables_extend.less';
             $deleteFolderWithThisPath = $this->directoryList->getPath(DirectoryList::STATIC_VIEW) . '/' . $this->helper->getTheme()->getFullPath() . '/' . $locale . '/css';
             $contentForImportDotLessFile = "\n @import '_design.less';";
@@ -183,6 +184,7 @@ class Generator
             }
 
             $this->addImportToDotLessDocument($contentForImportDotLessFile, $materialPathToDeleteBeforeCompiling2);
+            $this->checkIfDesignDotLessFileExists($materialPathForCheckingIfPathExistsFunction);
             $this->saveFile($contents, $materialPathArray);
 
         }
@@ -192,15 +194,15 @@ class Generator
     /**
      * this function makes sure all the right files get deleted before generated again
      * 
-     * @param array $contents first
-     * @param string $paths second
+     * @param array $contents first.
+     * @param string $paths second.
      * 
-     * @return when file is made 
+     * @return when file is made.
      */
     protected function saveFile($contents, $paths) {
         foreach ($paths as $path) {
 
-            // This is a echo to CLI for testing purposes
+            // This is a echo to CLI for testing purposes.
             // echo 'Check wat path is ===  ' . $path . PHP_EOL;
             if (file_exists($path)) {   
                 unlink($path);
@@ -224,12 +226,39 @@ class Generator
      */
     public function addImportToDotLessDocument($content, $path) {
 
+        // This echo is for testing purposes just to see what path is given in param of this function.
         // echo $path;
         if (file_exists($path)) {
+
+            // This echo is for testing purposes if this echo is called it means the function executed with succes.
             // echo 'yes';
             $fp = fopen($path, "ab");
             fwrite($fp, $content);
             fclose($fp);
+        }
+    }
+
+    /**
+     * This function will check if the following path with file exists.
+     * "app/design/frontend/Vicus/whitelabel/web/css/source/_design.less"
+     * If it does not exist this function wil create a empty file and this path to your code.
+     * If it does exists it wil do nothing and continue the code your running.
+     * 
+     * @param string $path first.
+     * 
+     * @return when file does not exists create file else nothing.
+     * 
+     */
+    public function checkIfDesignDotLessFileExists($path) {
+        if (!file_exists($path)) {
+
+            // This echo is for testing purposes if this echo is called it means the function executed with succes.
+            // echo 'file created';
+            mkdir($path, 0777, true);
+        } else {
+
+            // This echo is for testing purposes if this echo is called it means the function faild to do its designd purpose.
+            // echo 'file not created';
         }
     }
 }

@@ -26,13 +26,7 @@ Step 2. Edit the following file
         </container>
     ======================================================================================================================================
 
-Step 3. Make sure you are on the right theme. (White label) in back end and make following path
-
-    In the "app/design/frontend" folder make the following path
-    "/Vicus/whitelabel/web/css/source/_design.less"
-    you dont have to fill the _design.less file
-
-Step 4. run the following command in root directory
+Step 3. run the following command in root directory
 
     php bin/magento setup:static-content:deploy -f
     php bin/magento generate:style
