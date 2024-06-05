@@ -36,16 +36,3 @@ Step 4. run the following command in root directory
 
     php bin/magento setup:static-content:deploy -f
     php bin/magento generate:style
-
-Step 5. find this file in the following location
-
-    mage2/var/view_preprocessed/pub/static/frontend/Vicus/whitelabel/en_US/css/source/_variables_extend.less
-
-    place the following import line at the bottom of the _variables_extend.less file
-
-    @import '_design.less';
-
-Step 6. Run the following commands
-
-    php bin/magento setup:di:compile
-    php bin/magento generate:style
