@@ -11,7 +11,9 @@ Step 1. install Vicus_whitelabel, Vicus_Design module with composer
     php bin/magento setup:upgrade
     php bin/magento setup:di:compile
 
-Step 2. Edit the following file
+Step 2. make sure to use whitelabel theme
+
+Step 3. Edit the following file
 
     /home/patricia/mage2/vendor/vicus/theme-frontend-whitelabel/Magento_Search/layout/default.xml
 

@@ -16,6 +16,46 @@
 						<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
 					</field>
 				</group>
+
+				<group id="titleSizeSetting" translate="label" type="color" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Title size Settings</label>
+					<field id="titleSizeDropdownEen" translate="label" sortOrder="8" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>Title size 1</label>
+						<comment/>
+						<source_model>Vicus\Design\Model\Config\Source\ListMode</source_model>
+					</field>
+
+					<field id="titleSizeDropdownTwee" translate="label" sortOrder="8" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>Title size 2</label>
+						<comment/>
+						<source_model>Vicus\Design\Model\Config\Source\ListMode</source_model>
+					</field>
+
+					<field id="titleSizeDropdownDrie" translate="label" sortOrder="8" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>Title size 3</label>
+						<comment/>
+						<source_model>Vicus\Design\Model\Config\Source\ListMode</source_model>
+					</field>
+
+					<field id="titleSizeDropdownVier" translate="label" sortOrder="8" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>Title size 4</label>
+						<comment/>
+						<source_model>Vicus\Design\Model\Config\Source\ListMode</source_model>
+					</field>
+
+					<field id="titleSizeDropdownVijf" translate="label" sortOrder="8" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>Title size 5</label>
+						<comment/>
+						<source_model>Vicus\Design\Model\Config\Source\ListMode</source_model>
+					</field>
+
+					<field id="titleSizeDropdownZes" translate="label" sortOrder="8" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>Title size 6</label>
+						<comment/>
+						<source_model>Vicus\Design\Model\Config\Source\ListMode</source_model>
+					</field>
+				</group>
+
             	<group id="designSetting" translate="label" type="color" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1"> 
 					<label>Design Settings</label>
                 		<field id="color_1" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
