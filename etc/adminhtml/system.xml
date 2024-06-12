@@ -56,6 +56,41 @@
 					</field>
 				</group>
 
+				<group id="linkWeightSetting" translate="label" type="color" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Link Weight/Size Setting</label>
+					<field id="linkWeight" translate="label" sortOrder="8" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>Link Weight</label>
+						<comment/>
+						<source_model>Vicus\Design\Model\Config\Source\ListLinkWeight</source_model>
+					</field>
+				</group>
+
+				<group id="fontNormalSetting" translate="label" type="color" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Letter Font Setting</label>
+					<field id="fontNormal" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>Font Normal</label>
+						<comment/>
+					</field>
+				</group>
+
+				<group id="breadcrumbSizeSetting" translate="label" type="color" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Breadcrumb Size Setting</label>
+					<field id="breadcrumbSize" translate="label" sortOrder="8" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>Breadcrumb Size</label>
+						<comment/>
+						<source_model>Vicus\Design\Model\Config\Source\ListMode</source_model>
+					</field>
+				</group>
+
+				<group id="bulletPointsSetting" translate="label" type="color" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Bullet Points Setting</label>
+					<field id="bulletPoints" translate="label" type="select" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>Bullet Points</label>
+						<comment/>
+						<source_model>Vicus\Design\Model\Config\Source\BulletPointsList</source_model>
+					</field>
+				</group>
+
             	<group id="designSetting" translate="label" type="color" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1"> 
 					<label>Design Settings</label>
                 		<field id="color_1" translate="label" sortOrder="8" type="text" showInDefault="1" showInWebsite="1" showInStore="1">

@@ -93,9 +93,23 @@ class Generator
         $footerOutsideBackground = $this->helper->getStoreConfig('design/designSetting/footer_outside_background');
         $wishlistBtnColor = $this->helper->getStoreConfig('design/designSetting/wishlist_btn_color');
 
-        $colorData = [
-            '@primary-color:' . $colorEen . ';', 
-            '@secondary-color:' . $colorTwee . ';', 
+        $titleSizeDropdownEen = $this->helper->getStoreConfig('design/titleSizeSetting/titleSizeDropdownEen');
+        $titleSizeDropdownTwee = $this->helper->getStoreConfig('design/titleSizeSetting/titleSizeDropdownTwee');
+        $titleSizeDropdownDrie = $this->helper->getStoreConfig('design/titleSizeSetting/titleSizeDropdownDrie');
+        $titleSizeDropdownVier = $this->helper->getStoreConfig('design/titleSizeSetting/titleSizeDropdownVier');
+        $titleSizeDropdownVijf = $this->helper->getStoreConfig('design/titleSizeSetting/titleSizeDropdownVijf');
+        $titleSizeDropdownZes = $this->helper->getStoreConfig('design/titleSizeSetting/titleSizeDropdownZes');
+
+        $linkWeight = $this->helper->getStoreConfig('design/linkWeightSetting/linkWeight');
+        $fontNormal = $this->helper->getStoreConfig('design/fontNormalSetting/fontNormal');
+
+        $breadcrumbSize = $this->helper->getStoreConfig('design/breadcrumbSizeSetting/breadcrumbSize');
+
+        $bulletPoints = $this->helper->getStoreConfig('design/bulletPointsSetting/bulletPoints');
+
+        $designData = [
+            '@primary-color:' . $colorEen . ';',
+            '@secondary-color:' . $colorTwee . ';',
             '@support-color1:' . $colorDrie . ';',
             '@pagination-color:' . $colorPagination . ';',
             '@pagination-color-state:' . $paginationColorState . ';',
@@ -129,9 +143,19 @@ class Generator
             '@footer-bottom-text-color:' . $footerBottomTextColor . ';',
             '@footer-outside-background:' . $footerOutsideBackground . ';',
             '@wishlist-btn-color:' . $wishlistBtnColor . ';',
+            '@heading1-size:' . $titleSizeDropdownEen . ';',
+            '@heading2-size:' . $titleSizeDropdownTwee . ';',
+            '@heading3-size:' . $titleSizeDropdownDrie . ';',
+            '@heading4-size:' . $titleSizeDropdownVier . ';',
+            '@heading5-size:' . $titleSizeDropdownVijf . ';',
+            '@heading6-size:' . $titleSizeDropdownZes . ';',
+            '@link-weight:' . $linkWeight . ';',
+            '@font-normal:' . $fontNormal . ';',
+            '@breadcrumb-size:' . $breadcrumbSize . ';',
+            '@list-style:' . $bulletPoints . ';',
         ];
 
-        $contents = implode("\n", $colorData);
+        $contents = implode("\n", $designData);
         return $contents;
     }
 
