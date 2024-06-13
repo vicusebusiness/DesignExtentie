@@ -90,6 +90,24 @@
 						<source_model>Vicus\Design\Model\Config\Source\BulletPointsList</source_model>
 					</field>
 				</group>
+				
+				<group id="headerTextSizeSetting" translate="label" type="color" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Header Text Size Setting</label>
+					<field id="headerTextSize" translate="label" type="select" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>Header Text Size</label>
+						<comment/>
+						<source_model>Vicus\Design\Model\Config\Source\ListMode</source_model>
+					</field>
+				</group>
+
+				<group id="menuTopItemSizeSetting" translate="label" type="color" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Menu Top Item Size Setting</label>
+					<field id="menuTopItemSize" translate="label" type="select" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+						<label>Menue Top Item Size</label>
+						<comment/>
+						<source_model>Vicus\Design\Model\Config\Source\ListMode</source_model>
+					</field>
+				</group>
 
             	<group id="designSetting" translate="label" type="color" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1"> 
 					<label>Design Settings</label>

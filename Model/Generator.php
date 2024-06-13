@@ -107,6 +107,10 @@ class Generator
 
         $bulletPoints = $this->helper->getStoreConfig('design/bulletPointsSetting/bulletPoints');
 
+        $headerTextSize = $this->helper->getStoreConfig('design/headerTextSizeSetting/headerTextSize'); 
+
+        $menuTopItemSize = $this->helper->getStoreConfig('design/menuTopItemSizeSetting/menuTopItemSize');
+
         $designData = [
             '@primary-color:' . $colorEen . ';',
             '@secondary-color:' . $colorTwee . ';',
@@ -153,6 +157,8 @@ class Generator
             '@font-normal:' . $fontNormal . ';',
             '@breadcrumb-size:' . $breadcrumbSize . ';',
             '@list-style:' . $bulletPoints . ';',
+            '@header-top-font-size:' . $headerTextSize . ';',
+            '@menu-top-item-size:' . $menuTopItemSize . ';',
         ];
 
         $contents = implode("\n", $designData);
