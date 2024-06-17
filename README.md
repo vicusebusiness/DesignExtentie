@@ -32,3 +32,11 @@ Step 3. run the following command in root directory
 
     php bin/magento setup:static-content:deploy -f
     php bin/magento generate:style
+
+
+
+
+Side node
+    1. The module now provides a resource for assigning permissions to the configuration of this module.
+    2. You can assign the resource using the default System/Permissins/UserRoles.
+    3. The name of the resource is: Vicus Design Section.
