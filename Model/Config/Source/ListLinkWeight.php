@@ -1,5 +1,14 @@
 <?php
+/**
+ * Vicus Design
+ *
+ * @category    Vicus
+ * @package     Vicus\Design
+ * @author      Vicus eBusiness Solutions <info@vicus.nl>
+ * @copyright   see LICENSE.txt
+ */
 
+ 
 namespace Vicus\Design\Model\Config\Source;
 
 class ListLinkWeight implements \Magento\Framework\Option\ArrayInterface
